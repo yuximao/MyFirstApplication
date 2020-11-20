@@ -3,6 +3,19 @@ package com.example.myfirstapplication
 import java.text.SimpleDateFormat
 import java.util.*
 
+class Users {
+
+    var id: Long = 0;
+    var name: String = "";//表示不能为空
+    var age: Int = 0;
+    var name1: String? = null;//添加问号，表示可以为空
+
+    override fun toString(): String {
+        return "Users(id=$id, name='$name', age=$age)"
+    }
+}
+
+
 fun printDate():String{
     if (android.os.Build.VERSION.SDK_INT >= 24){
         return SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(Date())
