@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             val text = "Hello toast2!"
             val duration = Toast.LENGTH_SHORT
             val toast = Toast.makeText(applicationContext, text, duration)
-            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 50)
+            toast.setGravity(Gravity.CENTER_VERTICAL, 100, 500)
             toast.show()
         }
 //        custom_toast.setOnClickListener {
@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
 //                show()
 //            }
 //        }
-//        button1.setOnClickListener{
-//            val intent = Intent(applicationContext, SecondActivity::class.java)
-//            startActivity(intent)
-//        }
+        button1.setOnClickListener{
+            val intent = Intent(applicationContext, SecondActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 
