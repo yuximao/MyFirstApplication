@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -37,8 +38,10 @@ class MainActivity : AppCompatActivity() {
 //                show()
 //            }
 //        }
+        val nameText : EditText = findViewById(R.id.editTextTextPersonName)
         button1.setOnClickListener{
             val intent = Intent(applicationContext, SecondActivity::class.java)
+            intent.putExtra("name", nameText.text.toString() )
             startActivity(intent)
         }
 
